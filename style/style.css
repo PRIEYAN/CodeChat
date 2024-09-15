@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.6s;
+}
+body{
+    background-image: url(https://art.pixilart.com/sr28bef7ccccbaws3.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+span{
+    font-size: small;
+    color: rgb(0, 83, 131);
+    background-color: rgb(15, 215, 135);
+    padding: 5px;
+    border-radius: 10%;
+    position: relative;
+    top: -1.5px;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(45, 45, 45);
+}
+ul li {
+    padding: 20px 30px;
+    display: inline;
+}
+ul li :hover{
+    padding: 20px 20px;
+    background-color: rgba(255, 255, 255, 0.016);
+    box-shadow: inset 0px 0px 50px 0px rgba(0, 0, 0, 0.267);
+}
+nav{
+    box-shadow: 0px -40px 80px 0px rgb(173, 184, 255);
+    border-bottom: 0.3px solid rgb(0, 0, 0);
+    padding: 20px;
+}.joinus {
+    margin-left: 47%;
+    margin-top: 50px;
+    padding: 15px;
+    background-color: rgb(74, 176, 216); /* Default background color */
+    border: none; /* Remove border */
+    color: white; /* Text color */
+    font-size: 15px; /* Font size */
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+    transition: 0.7s; /* Smooth transition */
+    animation: pulse-shadow 5.5s infinite;
+    font-weight: 100;
+}
+
+.joinus:hover {
+    background-color: #52ff94; /* Darker background color on hover */
+    color: black;
+    transform: scaleY(1.09);
+    transform: rotateX(-20deg);
+    box-shadow: 0px 0px 20px 0px rgb(201, 201, 201);
+}
