@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{url_for('static',filename='form.css')}}">
+<style>
+    body{
+        background: url({{url_for('static',filename='images/form.gif')}});
+        background-size: 2000px;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: Arial, sans-serif;
+    }
+    
+</style>
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="login-container" >
+
+
+        <div id="login" >
+
+
+            <h2>CREATE A NEW ACCOUNT</h2>
+
+
+            <h4>Already have a account?<a href="{{url_for('login')}}">Log in</a></h4><br>
+
+<form action="" method="post" >
+
+            <input type="text" placeholder="UserId" name="userid" >   <br>
+            <input type="email" placeholder="Email Id" name="email" >   <br>
+            <input type="password" placeholder="Password" name="password" >
+            <input style="margin-top: 30px; padding: 10px; width: 100px; margin-left: 100px; " class="submit" type="submit" value="Submit">
+        
+        </form>
+
+        </div>
+
+    </div>
+
+    {% endblock %}
