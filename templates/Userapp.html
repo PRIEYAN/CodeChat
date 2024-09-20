@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href=" {{ url_for('static',filename='app.css') }} ">
+
+    <style>body{background: url(/static/images/app.gif);
+        background-size: cover;
+        background-repeat: no-repeat;}</style>
+
+    <title>CodeChat - Home</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="nav" >
+        
+   <div id="content" > <input type="number"  placeholder="Enter the Chat Code" ><button id="button" >🔍</button></div>
+    </div>
+    <div id="main" >
+        <div id="maincontent" >
+        <h1 id="usrname" >HI {{ user }} Bruh ! </h1><br>
+        <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" id="usrcode" >YOUR CODE : {{ userid }}</h2>
+        <h3>Enter your friends code to chat with them </h3>
+        <h5><i>This app is not completely build, so there maybe some errors,so just ignore them</i>😁</h5>
+    </div> </div>
+
+
+   
+   {% endblock %}

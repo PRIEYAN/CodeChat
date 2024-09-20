@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+
+{%block head%}
+
+<link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+
+<style>
+    body{ 
+        background-image: url({{ url_for('static', filename='images/main.gif') }});
+    }
+</style> 
+
+{% endblock %}
+
+{% block body %}
+
+<nav>
+    <ul>
+        <li><a class="login" href="{{url_for('login')}}">Log in</a></li>
+    </ul>
+    </nav>
+    
+
+    <h1 style="text-align: center; margin-top: 160px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style: impact; " >WELCOME  TO  CODE  CHAT :D</h1>
+    <h2  style="text-align: center; margin-top: 50px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 600; " >A basic chat platform</h2>
+    <p  style="text-align: center; color: rgb(35, 35, 35); margin-top: 60px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; " >Here you can chat with your friends <br> by knowing their chat code, and this platform is made for fun,so enjoy it</p>
+    
+    
+    <button onclick="window.location.href='{{ url_for('signup') }}'" class="joinus">JOIN US!</button>
+
+{% endblock %}
