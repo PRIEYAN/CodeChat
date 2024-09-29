@@ -73,16 +73,10 @@ def room():
 # Socket.IO Event for handling users joining a room
 @socketio.on('join')
 def on_join(data):
+    username = session.get('username', 'Anonymous')  # Default to 'Anonymous' if not logged in
     room = data['room']
-    username = session.get('username', 'Anonymous')  # Get username from session or set a default
-    session['room'] = room  # Store the room in the session
-    
     join_room(room)
-    send(f"{username} has joined the room {room}.", to=room)
-    
-    # Send the room ID back to the client
-    socketio.emit('room_joined', {'room': room}, to=request.sid)
-
+    send({'name': username, 'message': f'blud joined the room!'}, to=room)
 
 # Socket.IO Event for handling message sending
 @socketio.on('message')

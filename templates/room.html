@@ -6,7 +6,7 @@
         color: black;
     }
     body {
-        background-color: rgb(56, 56, 56);
+        background-color: rgb(95, 95, 95);
     }
     form {
         display: flex;
@@ -24,16 +24,30 @@
         background-color: rgb(179, 179, 179);
         font-size: 15px;
     }
+    #messages div{
+        font-size: 20px;
+        margin: 20px;
+        margin-left: -10px;
+        font-weight: 500;
+        font-family: "Chakra Petch", sans-serif;
+        background-color: rgba(0, 0, 0, 0.295);
+        border-radius: 0px 20px 20px 0px;
+        padding: 8px;
+    }
 </style>
 {% endblock %}
 
 {% block body %}
 <div id="chatbox">
-    <div class="messages" id="messages"></div>
+    <div class="messages" id="messages">
+
+
+
+    </div>
 
     <form name="myform" id="chat-form">
         <input style="padding: 16px 5px;border: none; color: black;" type="text" placeholder="type to chat" id="chat">
-        <button style="padding: 16px 8px;border: none;" type="submit">Send</button>
+        <button style="padding: 16px 8px;border: none;font-size:16px;" type="submit">➤</button>
     </form>
 </div>
 <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
