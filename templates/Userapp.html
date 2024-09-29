@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href=" {{ url_for('static',filename='app.css') }} ">
+
+    <style>body{background: url(/static/images/app.gif);
+        background-size: cover;
+        background-repeat: no-repeat;}
+
+        #show{
+            background-color: rgb(255, 255, 255);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 16px ;
+            position: relative;
+            top: -30px;
+        }
+        #show:hover{
+            background-color: rgb(133, 171, 255);
+        }
+
+    </style>
+
+    <title>CodeChat - Home</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="nav" >
+        
+   <div id="content" > <input type="number"  placeholder="Enter the Chat Code" ><button id="button" >🔍</button></div>
+    </div>
+    <div id="main" >
+        <div id="maincontent" >
+        <h1 id="usrname" >HI {{ name }} Bruh ! </h1><br>
+        <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" id="usrcode" >YOUR CODE : {{ randm }}</h2>
+        <form action="/app">
+        <button style="padding: 5px; border-radius: 30px;border:none; " id="show" name="show" >show code</button> 
+        <h3>Enter your friends code to chat with them </h3>
+        <h5><i>This app is not completely build, so there maybe some errors,so just ignore them</i>😁</h5><br><br>
+        <h3><b>NOTE : THIS WEB IS UNDER CONSTRUCTION PLEASE CLICK THE BELOW LINK</b></h3>
+    </div> </div>
+<form action="/room" method="post" >
+    <center><li><a style="font-size: 20px; background-color:black;color:rgb(0, 59, 252); " href="{{ url_for('room') }}">Go to Room</a></center>
+    </li>
+</form>
+   
+   {% endblock %}

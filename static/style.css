@@ -59,9 +59,9 @@ nav {
     cursor: pointer;
     border-radius: 20px;
     transition: background-color 0.3s ease;
-    animation: pulse-shadow 5.5s infinite;
     font-weight: 100;
     display: inline-block; /* Ensure button is inline */
+    animation: pulse-shadow 5.5s infinite;
 }
 
 .joinus:hover {

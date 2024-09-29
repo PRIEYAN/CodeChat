@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+    body {
+        background: url({{ url_for('static', filename='images/form.gif') }});
+    }
+</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+{% endblock %}
+
+{% block body %}
+<div id="login-container">
+    <div id="login">
+        <h2>LOG IN</h2>
+        <h4>Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></h4><br>
+        <form action="/login" method="POST">
+            <input type="email" placeholder="Email Id" name="email" required><br>
+
+
+            <input type="password" placeholder="Password" name="password" required><br>
+            
+            {% if finnalMsg %}
+                <p style="color: red;" >{{ finnalMsg }}</p>
+            {% endif %}
+            
+            <!-- Changed the <a> to a proper submit button -->
+            <button type="submit" onclick="/app" class="submit-link" style="display: inline-block; padding: 10px; width: 100px; margin-top: 30px; margin-left: 68px; text-align: center; background-color: blue; color: white; border-radius: 5px;">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
