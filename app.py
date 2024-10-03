@@ -66,14 +66,14 @@ def theapp():
     randm = int(random.uniform(1000, 9999))
     name = session.get('username', ' ')
     return render_template('Userapp.html', randm=randm, name=name)
-
+ 
 @app.route('/room', methods=['POST', 'GET'])
 def room():
     return render_template('room.html')
 # Socket.IO Event for handling users joining a room
 @socketio.on('join')
 def on_join(data):
-    username = session.get('username', 'Anonymous')  # Default to 'Anonymous' if not logged in
+    username = session.get('username', 'Comrade')  # Default to 'Anonymous' if not logged in
     room = data['room']
     join_room(room)
     send({'name': username, 'message': f'blud joined the room!'}, to=room)

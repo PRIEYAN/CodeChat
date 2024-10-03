@@ -6,42 +6,49 @@
         color: black;
     }
     body {
-        background-color: rgb(95, 95, 95);
+        background-color: rgb(85, 85, 85);
     }
     form {
         display: flex;
         justify-content: center;
         align-items: center;
         position: fixed;
-        bottom: 0px;
         width: 100%;
+        bottom: 0;
         left: -0.5px;
         box-shadow: 0px -1px 50px 0px rgb(0, 0, 0);
         font-family: Arial, Helvetica, sans-serif;
     }
     form input {
         width: 100%;
-        background-color: rgb(179, 179, 179);
+        background-color: rgb(255, 255, 255);
         font-size: 15px;
     }
     #messages div{
+        color: rgb(0, 0, 0);
         font-size: 20px;
         margin: 20px;
         margin-left: -10px;
         font-weight: 500;
         font-family: "Chakra Petch", sans-serif;
-        background-color: rgba(0, 0, 0, 0.295);
+        background-color: goldenrod;
         border-radius: 0px 20px 20px 0px;
         padding: 8px;
+    }
+    h1{
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: goldenrod;
     }
 </style>
 {% endblock %}
 
 {% block body %}
+<h1>ONLINE FORUM</h1>
 <div id="chatbox">
     <div class="messages" id="messages">
 
-
+        <br>
 
     </div>
 
@@ -74,7 +81,7 @@
     // Receive messages from the server
     socket.on('message', function(data) {
         const messages = document.getElementById('messages');
-        const msg = document.createElement('div');
+        const msg = document.createElement('div',);
         msg.textContent = `${data.name}: ${data.message}`;
         messages.appendChild(msg);
     });

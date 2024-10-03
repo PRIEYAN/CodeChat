@@ -3,7 +3,6 @@
 {%block head%}
 
 <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
-
 <style>
     body{ 
         background-image: url({{ url_for('static', filename='images/main.gif') }});
@@ -27,5 +26,8 @@
     
     
     <button onclick="window.location.href='{{ url_for('signup') }}'" class="joinus">JOIN US!</button>
+
+
+
 
 {% endblock %}
