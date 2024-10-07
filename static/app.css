@@ -11,7 +11,7 @@
     align-items: center;
     display: flex;
 }
-#nav input{
+#nav #fcode{
     padding: 7px;
     border-radius: 20px 0px 0px 20px;
     border: none;
@@ -19,6 +19,7 @@
     width: 400px;
     animation: sinput 1s;
 }
+
 @keyframes sinput {
     0%{
         width: 200px;
@@ -39,12 +40,10 @@
     border-radius: 20px;
     background-color: rgb(228, 228, 228);
 }
-#nav button{
-    padding: 6px;
+#button{
+    padding: 7px;
     border-radius: 0px 20px 20px 0px;
     border: none;
-    position: relative;
-    top: 1px;
 }
 
 #main {

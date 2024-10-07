@@ -20,6 +20,12 @@
         #show:hover{
             background-color: rgb(133, 171, 255);
         }
+        a{
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            height: 5px;
+        }
 
     </style>
 
@@ -28,26 +34,34 @@
 {% endblock %}
 
 {% block body %}
+<script src="/static/fcode.js" ></script>
 
-    <div id="nav" >
-        
-   <div id="content" > <input type="number"  placeholder="Enter the Chat Code" ><button id="button" >🔍</button></div>
+
+<div id="nav">
+    <div id="content">
     </div>
-    <div id="main" >
-        <div id="maincontent" >
-        <h1 id="usrname" >HI {{ name }} Bruh ! </h1><br>
-        <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" id="usrcode" >YOUR CODE : {{ randm }}</h2>
+</div>
+
+<div id="main">
+    <div id="maincontent">
+        <h1 id="usrname">HI {{ name }} Bruh !</h1><br>
+        <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" id="usrcode">YOUR CODE : {{ randm }}</h2>
+        
         <form action="/app">
-        <button style="padding: 5px; border-radius: 30px;border:none; " id="show" name="show" >show code</button> 
-        <h3>Enter your friends code to chat with them </h3>
-        <h5><i>This app is not completely build, so there maybe some errors,so just ignore them</i>😁</h5><br><br>
-        <h3><b>NOTE : THIS WEB IS UNDER CONSTRUCTION PLEASE CLICK THE BELOW LINK</b></h3>
-    </div> </div>
-<form action="/room" method="post" >
-    <center><li><a style="font-size: 20px; background-color:black;color:rgb(0, 59, 252); " href="{{ url_for('room') }}">Go to Room</a></center>
-    </li>
-</form>
-   
+            <button style="padding: 5px; border-radius: 30px;border:none;" id="show" name="show">Show code</button>
+            
+    <center>
+        
+        
+    </center>
+        </form>
+        
+        <h3>Enter your friend's code to chat with them</h3>
+        <a style="font-size: 20px;  background-color:rgb(255, 255, 255);color:rgb(0, 59, 252);" href="{{ url_for('room') }}">Chat</a><br><br>
+        <h5><i>This app is not completely built, so there may be some errors, so just ignore them</i>😁</h5><br><br>
+        <h3><b>NOTE: THIS WEB IS UNDER CONSTRUCTION. PLEASE CLICK THE LINK BELOW</b></h3>
+    </div>
+</div>
 
 
-   {% endblock %}
+{% endblock %}

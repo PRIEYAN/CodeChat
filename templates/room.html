@@ -44,7 +44,7 @@
 {% endblock %}
 
 {% block body %}
-<h1>ONLINE FORUM</h1>
+<h1 id="thehead" ></h1>
 <div id="chatbox">
     <div class="messages" id="messages">
 
@@ -62,8 +62,10 @@
     var socket = io();
 
     // Handle form submission and joining a room
-    const room = 1234;  // You can change this dynamically or get it from the user input
+    var fcode = prompt("Enter the Room code Man !");
+    let room = fcode;  // You can change this dynamically or get it from the user input
     socket.emit('join', { room: room });
+    document.getElementById('thehead').innerHTML= "ONLINE FORUM :" + room;
 
     // Display the room number in the UI when received from the server
     socket.on('room_joined', function(data) {
