@@ -81,3 +81,17 @@ html, body {
 .submit:hover{
     background-color: rgb(61, 61, 61);
 }
+footer{
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    color: rgb(150, 150, 150);
+    padding: 5px;
+    font-size: 15px;
+}
+footer a{
+    font-size: 15px;
+    color: rgb(175, 175, 175);
+}

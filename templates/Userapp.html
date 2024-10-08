@@ -11,20 +11,26 @@
         background-repeat: no-repeat;}
 
         #show{
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(106, 133, 255);
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 16px ;
             position: relative;
             top: -30px;
+
         }
         #show:hover{
-            background-color: rgb(133, 171, 255);
+            background-color: rgb(29, 78, 185);
+            color: white;
+            box-shadow: inset 0px 0px 30px 4px black;
         }
-        a{
+        #a{
             text-decoration: none;
             padding: 15px;
             border-radius: 10px;
             height: 5px;
+        }
+        #a:hover{
+            background-color: rgb(29, 78, 185);
         }
 
     </style>
@@ -39,16 +45,16 @@
 
 <div id="nav">
     <div id="content">
+
     </div>
 </div>
 
 <div id="main">
     <div id="maincontent">
-        <h1 id="usrname">HI {{ name }} Bruh !</h1><br>
-        <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" id="usrcode">YOUR CODE : {{ randm }}</h2>
+        <h1 id="usrname">Hello {{ name }} : {{ randm }} </h1>
         
         <form action="/app">
-            <button style="padding: 5px; border-radius: 30px;border:none;" id="show" name="show">Show code</button>
+            <button style="padding: 9px 10px ; border-radius: 10px;border:none;" id="show" name="show">Show code</button>
             
     <center>
         
@@ -56,12 +62,13 @@
     </center>
         </form>
         
-        <h3>Enter your friend's code to chat with them</h3>
-        <a style="font-size: 20px;  background-color:rgb(255, 255, 255);color:rgb(0, 59, 252);" href="{{ url_for('room') }}">Chat</a><br><br>
-        <h5><i>This app is not completely built, so there may be some errors, so just ignore them</i>😁</h5><br><br>
+        <h3 style="font-weight: 600;" >Enter your friend's code to chat with them</h3>
+        <a  id="a" style="font-size: 20px; padding:8px 25   px; background-color:rgb(90, 90, 90);color:rgb(255, 255, 255);" href="{{ url_for('room') }}">Enter the code</a><br><br>
+        <h5 style="font-weight:900;" ><i>This app is not completely built, so there may be some errors, so just ignore them</i>😁</h5><br><br>
         <h3><b>NOTE: THIS WEB IS UNDER CONSTRUCTION. PLEASE CLICK THE LINK BELOW</b></h3>
     </div>
 </div>
 
 
+<footer>Basic ChatForum based on flask | <a href="https://www.instagram.com/prie.deb/">About me</a></footer>
 {% endblock %}
