@@ -1,1 +1,1 @@
-This is just a chat app based on some code for an individual person,, by using your code, your friend can chat with you,, this app is still under contruction(backend) :)
+This is a simple chat application built with HTML ,css, JavaScript, python flask designed for individual use. By implementing this code, you can create a basic interface where you and your friend can exchange messages in real-time. ensuring that the latest conversation is always visible. This makes it easy to keep track of the discussion without manual scrolling.
